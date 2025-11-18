@@ -1,0 +1,19 @@
+from sqlalchemy import Column, Integer, String, Float, Date, Boolean, ForeignKey
+from sqlalchemy.orm import relationship
+from app.database import Base
+
+class Expense(Base):
+    __tablename__ = "expenses"
+
+    id = Column(Integer, primary_key=True, index=True)
+    description = Column(String, nullable=False)
+    amount = Column(Float, nullable=False)
+    date = Column(Date, nullable=False)
+    type = Column(String, nullable=False)
+    paid = Column(Boolean, default=False)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    end_date = Column(Date, nullable=True)
+
+    user = relationship("User", back_populates="expenses")
+    def __repr__(self):
+        return f"<Expense(id={self.id}, description='{self.description}', amount={self.amount}, date={self.date}, type='{self.type}', paid={self.paid}, user_id={self.user_id}, end_date={self.end_date})>"
