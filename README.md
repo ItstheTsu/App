@@ -19,17 +19,9 @@ Gerencie suas finanças com eficiência: registre despesas, visualize seus gasto
 
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Tecnologias](#tecnologias)
-- [Arquitetura do Backend](#arquitetura-do-backend)
-- [Banco de Dados](#banco-de-dados)
 - [Instalação](#instalação)
   - [Backend](#backend)
   - [Frontend](#frontend)
-- [Rotas da API](#rotas-da-api)
-  - [Users](#users)
-  - [Expenses](#expenses)
-- [Consumindo a API no Frontend](#consumindo-a-api-no-frontend)
-- [Roadmap](#roadmap)
-- [Licença](#licença)
 
 ---
 
